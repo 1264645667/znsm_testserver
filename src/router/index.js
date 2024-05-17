@@ -51,11 +51,11 @@ export const constantRoutes = [
       path: 'dashboard',
       name: 'Dashboard',
       component: () => import('@/views/dashboard/index'),
-      meta: { title: 'Dashboard', icon: 'dashboard' }
+      meta: { title: '主页', icon: 'dashboard' }
     }]
   },
 
-  {
+  /*{
     path: '/example',
     component: Layout,
     redirect: '/example/table',
@@ -75,7 +75,7 @@ export const constantRoutes = [
         meta: { title: 'Tree', icon: 'tree' }
       }
     ]
-  },
+  },*/
 
   {
     path: '/form',
@@ -85,11 +85,24 @@ export const constantRoutes = [
         path: 'index',
         name: 'Form',
         component: () => import('@/views/form/index'),
-        meta: { title: 'Form', icon: 'form' }
+        meta: { title: '智能扫码信息维护', icon: 'form' }
       }
     ]
   },
 
+  {
+    path: '/znsm',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Znsm',
+        component: () => import('@/views/znsm/index'),
+        meta: { title: '智能扫码登录/认证', icon: 'znsm' }
+      }
+    ]
+  },
+/*
   {
     path: '/nested',
     component: Layout,
@@ -158,7 +171,7 @@ export const constantRoutes = [
         meta: { title: 'External Link', icon: 'link' }
       }
     ]
-  },
+  },*/
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }

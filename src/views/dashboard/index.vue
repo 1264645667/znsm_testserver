@@ -1,6 +1,6 @@
 <template>
   <div class="dashboard-container">
-    <div class="dashboard-text">name: {{ name }}</div>
+    <div class="dashboard-text">智能扫码独立服务测试前端页面: {{ name }}</div>
   </div>
 </template>
 
